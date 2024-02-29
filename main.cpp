@@ -5,6 +5,7 @@
 #include "./headers/stlreader.h"
 #include "./headers/writer.h"
 #include "./headers/halfsection.h"
+#include "./headers/boundingBox.h"
 
 int main()
 {
@@ -13,14 +14,13 @@ int main()
         string filepath = "D:/sonali_workspace/C++/TRANSLATOR/READ STL/resources/cube.stl";
         Geometry::Triangulation triangulation;
         Geometry::STLReader stlReader;
-        Geometry::HalfSection halfsection;
+        Feature::HalfSection halfsection;
+        Feature::BoundingBox boundingBox;
         Geometry::Point3D  minVertex;
         Geometry::Point3D maxVertex;
-    
         stlReader.readSTL(filepath, triangulation);
-
-        halfsection.calculateBoundingBox (minVertex, maxVertex,triangulation);
-        Geometry::Point3D center = halfsection.calculateBoundingBoxCenter(minVertex, maxVertex);
+        boundingBox.calculateBoundingBox (minVertex, maxVertex,triangulation);
+        Geometry::Point3D center = boundingBox.calculateBoundingBoxCenter(minVertex, maxVertex);
         halfsection.cutObject(center, triangulation);
         
     }
