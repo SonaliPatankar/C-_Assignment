@@ -11,9 +11,9 @@ namespace Geometry
     public:
         Triangulation();
         ~Triangulation();
-        std::vector<Triangle> &triangles();
-        std::vector<Point3D> &uniquePoints();
-        std::vector<Point3D> &uniqueNormals();
+        std::vector<Triangle>& triangles();
+        std::vector<Point3D>& uniquePoints();
+        std::vector<Point3D>& uniqueNormals();
 
     private:
         std::vector<Triangle> mTriangles;

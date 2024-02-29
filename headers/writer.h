@@ -3,12 +3,12 @@
 #include <string>
 #include "Triangulation.h"
 
-namespace Geometry
+namespace IOOperation
 {
     class Writer
     {
     public:
         // Function to write geometry data to an STL file
-        void write(std::string &filePath, std::vector<Triangle> H_Triangles,std::vector<Point3D> &points);
+        void write(std::string& filePath, std::vector<Geometry::Triangle> trinagles,std::vector<Geometry::Point3D> &points);
     };
 }
