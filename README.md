@@ -17,5 +17,6 @@ stlReader.h: Reads .stl files and populates a triangulation object.
 writer.h: Manages writing data to files.
 
 ## Directories
-**inputfiles**: Stores input files like .stl
-**outputfiles**: Stores output files such as .txt which contains coordinates for half setion view
+-**inputfiles**: Stores input files like .stl
+
+-**outputfiles**: Stores output files such as .txt which contains coordinates for half setion view
